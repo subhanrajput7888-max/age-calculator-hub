@@ -1,0 +1,1186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Comprehensive age calculator, trending blogs on finance, health & social media, AI chatbot, and professional contact information. SEO-optimized and mobile-responsive.">
+    <meta name="keywords" content="age calculator, finance blogs, health blogs, social media blogs, AI chatbot, contact information">
+    <meta name="author" content="Subhan">
+    <meta property="og:title" content="Age Calculator & Blog Hub - Smart AI Assistance">
+    <meta property="og:description" content="Calculate your exact age, read trending blogs, and chat with our smart AI assistant.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="/">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="robots" content="index, follow">
+    <title>Age Calculator & Blog Hub - Smart AI Assistance</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom Styles -->
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .glass-effect {
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .chat-bubble-user {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        
+        .chat-bubble-ai {
+            background: #f3f4f6;
+            color: #1f2937;
+        }
+        
+        .animate-fadeIn {
+            animation: fadeIn 0.5s ease-in;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .blog-card:hover {
+            transform: translateY(-5px);
+            transition: transform 0.3s ease;
+        }
+        
+        .section-padding {
+            padding: 4rem 0;
+        }
+        
+        .smooth-scroll {
+            scroll-behavior: smooth;
+        }
+        
+        /* Custom scrollbar for chat */
+        .chat-container::-webkit-scrollbar {
+            width: 6px;
+        }
+        
+        .chat-container::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 3px;
+        }
+        
+        .chat-container::-webkit-scrollbar-thumb {
+            background: #c1c1c1;
+            border-radius: 3px;
+        }
+        
+        .chat-container::-webkit-scrollbar-thumb:hover {
+            background: #a1a1a1;
+        }
+    </style>
+</head>
+<body class="font-sans bg-gray-50 smooth-scroll">
+    <!-- Navigation Header -->
+    <nav class="bg-white shadow-lg fixed top-0 w-full z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <h1 class="text-xl font-bold text-gray-800">
+                        <i class="fas fa-calculator text-blue-600"></i>
+                        AgeCalc Hub
+                    </h1>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="nav-link text-gray-700 hover:text-blue-600 transition duration-300">Home</a>
+                    <a href="#age-calculator" class="nav-link text-gray-700 hover:text-blue-600 transition duration-300">Age Calculator</a>
+                    <a href="#blogs" class="nav-link text-gray-700 hover:text-blue-600 transition duration-300">Blogs</a>
+                    <a href="#about" class="nav-link text-gray-700 hover:text-blue-600 transition duration-300">About Us</a>
+                    <a href="#contact" class="nav-link text-gray-700 hover:text-blue-600 transition duration-300">Contact</a>
+                    <a href="#smart-ai" class="nav-link text-gray-700 hover:text-blue-600 transition duration-300">Smart AI</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-700">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="#home" class="block px-3 py-2 text-gray-700 hover:text-blue-600">Home</a>
+                <a href="#age-calculator" class="block px-3 py-2 text-gray-700 hover:text-blue-600">Age Calculator</a>
+                <a href="#blogs" class="block px-3 py-2 text-gray-700 hover:text-blue-600">Blogs</a>
+                <a href="#about" class="block px-3 py-2 text-gray-700 hover:text-blue-600">About Us</a>
+                <a href="#contact" class="block px-3 py-2 text-gray-700 hover:text-blue-600">Contact</a>
+                <a href="#smart-ai" class="block px-3 py-2 text-gray-700 hover:text-blue-600">Smart AI</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="gradient-bg text-white section-padding pt-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6 animate-fadeIn">
+                Your Complete Digital Hub
+            </h1>
+            <p class="text-xl md:text-2xl mb-8 animate-fadeIn">
+                Calculate your age precisely, explore trending blogs, and chat with our smart AI assistant
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center animate-fadeIn">
+                <a href="#age-calculator" class="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition duration-300">
+                    <i class="fas fa-calculator mr-2"></i>Calculate Age
+                </a>
+                <a href="#blogs" class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition duration-300">
+                    <i class="fas fa-blog mr-2"></i>Read Blogs
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Age Calculator Section -->
+    <section id="age-calculator" class="section-padding bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+                    <i class="fas fa-birthday-cake text-blue-600 mr-3"></i>
+                    Precise Age Calculator
+                </h2>
+                <p class="text-lg text-gray-600">
+                    Calculate your exact age in years, months, days, hours, and minutes
+                </p>
+            </div>
+            
+            <div class="bg-gradient-to-br from-blue-50 to-purple-50 rounded-2xl p-8 shadow-xl">
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- Input Form -->
+                    <div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-6">Enter Your Birth Date</h3>
+                        <form id="age-form" class="space-y-4">
+                            <div>
+                                <label for="birth-date" class="block text-sm font-medium text-gray-700 mb-2">
+                                    Date of Birth
+                                </label>
+                                <input 
+                                    type="date" 
+                                    id="birth-date" 
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                                    required
+                                >
+                            </div>
+                            <button 
+                                type="submit" 
+                                class="w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-blue-700 transition duration-300"
+                            >
+                                <i class="fas fa-calculator mr-2"></i>
+                                Calculate My Age
+                            </button>
+                        </form>
+                    </div>
+                    
+                    <!-- Results Display -->
+                    <div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-6">Your Age Details</h3>
+                        <div id="age-results" class="hidden space-y-4">
+                            <div class="bg-white rounded-lg p-4 shadow-md">
+                                <div class="flex items-center justify-between">
+                                    <span class="text-gray-600">Years</span>
+                                    <span id="years" class="text-2xl font-bold text-blue-600">0</span>
+                                </div>
+                            </div>
+                            <div class="bg-white rounded-lg p-4 shadow-md">
+                                <div class="flex items-center justify-between">
+                                    <span class="text-gray-600">Months</span>
+                                    <span id="months" class="text-xl font-bold text-green-600">0</span>
+                                </div>
+                            </div>
+                            <div class="bg-white rounded-lg p-4 shadow-md">
+                                <div class="flex items-center justify-between">
+                                    <span class="text-gray-600">Days</span>
+                                    <span id="days" class="text-xl font-bold text-purple-600">0</span>
+                                </div>
+                            </div>
+                            <div class="bg-white rounded-lg p-4 shadow-md">
+                                <div class="flex items-center justify-between">
+                                    <span class="text-gray-600">Hours</span>
+                                    <span id="hours" class="text-lg font-bold text-orange-600">0</span>
+                                </div>
+                            </div>
+                            <div class="bg-white rounded-lg p-4 shadow-md">
+                                <div class="flex items-center justify-between">
+                                    <span class="text-gray-600">Minutes</span>
+                                    <span id="minutes" class="text-lg font-bold text-red-600">0</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="age-placeholder" class="text-center text-gray-500 py-12">
+                            <i class="fas fa-clock text-4xl mb-4"></i>
+                            <p>Enter your birth date to see detailed age calculation</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blogs" class="section-padding bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+                    <i class="fas fa-newspaper text-blue-600 mr-3"></i>
+                    Trending Blogs
+                </h2>
+                <p class="text-lg text-gray-600">
+                    Stay updated with the latest insights in Finance, Health, and Social Media
+                </p>
+            </div>
+
+            <!-- Blog Categories -->
+            <div class="flex flex-wrap justify-center gap-4 mb-8">
+                <button class="blog-filter active bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition duration-300" data-category="all">
+                    All Posts
+                </button>
+                <button class="blog-filter bg-gray-200 text-gray-700 px-6 py-2 rounded-full hover:bg-gray-300 transition duration-300" data-category="finance">
+                    Finance
+                </button>
+                <button class="blog-filter bg-gray-200 text-gray-700 px-6 py-2 rounded-full hover:bg-gray-300 transition duration-300" data-category="health">
+                    Health
+                </button>
+                <button class="blog-filter bg-gray-200 text-gray-700 px-6 py-2 rounded-full hover:bg-gray-300 transition duration-300" data-category="social-media">
+                    Social Media
+                </button>
+            </div>
+
+            <!-- Blog Grid -->
+            <div id="blog-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Finance Blogs -->
+                <article class="blog-card bg-white rounded-xl shadow-lg overflow-hidden" data-category="finance">
+                    <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=400" alt="Personal finance planning and budgeting" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">10 Essential Personal Finance Tips for 2024</h3>
+                        <p class="text-gray-600 mb-4">Master your money management with these proven strategies for budgeting, saving, and investing in the modern economy.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Finance</span>
+                            <span class="text-gray-500 text-sm">5 min read</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="blog-card bg-white rounded-xl shadow-lg overflow-hidden" data-category="finance">
+                    <img src="https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?w=400" alt="Investment strategy and portfolio management" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Smart Investment Strategies for Beginners</h3>
+                        <p class="text-gray-600 mb-4">Learn how to start investing with confidence using time-tested strategies and risk management techniques.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Finance</span>
+                            <span class="text-gray-500 text-sm">7 min read</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="blog-card bg-white rounded-xl shadow-lg overflow-hidden" data-category="finance">
+                    <img src="https://images.unsplash.com/photo-1640340434855-6084b1f4901c?w=400" alt="Cryptocurrency and digital assets" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Understanding Cryptocurrency: A Complete Guide</h3>
+                        <p class="text-gray-600 mb-4">Dive into the world of digital currencies and learn how to navigate the crypto market safely and profitably.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Finance</span>
+                            <span class="text-gray-500 text-sm">10 min read</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="blog-card bg-white rounded-xl shadow-lg overflow-hidden" data-category="finance">
+                    <img src="https://images.unsplash.com/photo-1434626881859-194d67b2b86f?w=400" alt="Retirement planning and savings" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Retirement Planning in Your 30s: Start Strong</h3>
+                        <p class="text-gray-600 mb-4">Build a solid foundation for your retirement with strategic planning and smart savings habits that compound over time.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Finance</span>
+                            <span class="text-gray-500 text-sm">6 min read</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="blog-card bg-white rounded-xl shadow-lg overflow-hidden" data-category="finance">
+                    <img src="https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?w=400" alt="Stock market analysis and trading" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Stock Market Fundamentals: Building Wealth</h3>
+                        <p class="text-gray-600 mb-4">Master the basics of stock investing and learn how to build long-term wealth through equity investments.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Finance</span>
+                            <span class="text-gray-500 text-sm">8 min read</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="blog-card bg-white rounded-xl shadow-lg overflow-hidden" data-category="finance">
+                    <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=400" alt="Real estate investment and property" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Real Estate Investing: Your First Property</h3>
+                        <p class="text-gray-600 mb-4">Navigate the real estate market and learn how to make your first property investment a profitable venture.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Finance</span>
+                            <span class="text-gray-500 text-sm">9 min read</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="blog-card bg-white rounded-xl shadow-lg overflow-hidden" data-category="finance">
+                    <img src="https://images.unsplash.com/photo-1554224154-26032fced8bd?w=400" alt="Financial planning and wealth management" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Tax-Efficient Investing Strategies</h3>
+                        <p class="text-gray-600 mb-4">Maximize your investment returns by understanding tax implications and implementing smart tax-efficient strategies.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Finance</span>
+                            <span class="text-gray-500 text-sm">7 min read</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Health Blogs -->
+                <article class="blog-card bg-white rounded-xl shadow-lg overflow-hidden" data-category="health">
+                    <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=400" alt="Healthy nutrition and balanced diet" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Nutrition Essentials: Fuel Your Body Right</h3>
+                        <p class="text-gray-600 mb-4">Discover the fundamentals of proper nutrition and how to create a balanced diet that supports your health goals.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">Health</span>
+                            <span class="text-gray-500 text-sm">6 min read</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="blog-card bg-white rounded-xl shadow-lg overflow-hidden" data-category="health">
+                    <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=400" alt="Mental health and wellness practices" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Mental Health: Building Resilience Daily</h3>
+                        <p class="text-gray-600 mb-4">Learn practical strategies for maintaining mental wellness and building emotional resilience in challenging times.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">Health</span>
+                            <span class="text-gray-500 text-sm">8 min read</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="blog-card bg-white rounded-xl shadow-lg overflow-hidden" data-category="health">
+                    <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400" alt="Exercise and fitness routines" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Home Fitness: Effective Workout Routines</h3>
+                        <p class="text-gray-600 mb-4">Stay fit with these effective home workout routines that require minimal equipment but deliver maximum results.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">Health</span>
+                            <span class="text-gray-500 text-sm">5 min read</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="blog-card bg-white rounded-xl shadow-lg overflow-hidden" data-category="health">
+                    <img src="https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?w=400" alt="Sleep quality and health benefits" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Sleep Optimization: Rest for Better Health</h3>
+                        <p class="text-gray-600 mb-4">Unlock the secrets of quality sleep and learn how proper rest can transform your physical and mental health.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">Health</span>
+                            <span class="text-gray-500 text-sm">7 min read</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="blog-card bg-white rounded-xl shadow-lg overflow-hidden" data-category="health">
+                    <img src="https://images.unsplash.com/photo-1559757175-0eb30cd8c063?w=400" alt="Healthy lifestyle and wellness tips" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Holistic Wellness: Mind, Body, and Spirit</h3>
+                        <p class="text-gray-600 mb-4">Explore comprehensive approaches to wellness that address physical, mental, and emotional health simultaneously.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">Health</span>
+                            <span class="text-gray-500 text-sm">9 min read</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="blog-card bg-white rounded-xl shadow-lg overflow-hidden" data-category="health">
+                    <img src="https://images.unsplash.com/photo-1506629905607-0359b04ea57f?w=400" alt="Stress management and relaxation" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Stress Management: Finding Your Balance</h3>
+                        <p class="text-gray-600 mb-4">Discover effective techniques for managing stress and creating a more balanced, peaceful lifestyle.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">Health</span>
+                            <span class="text-gray-500 text-sm">6 min read</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Social Media Blogs -->
+                <article class="blog-card bg-white rounded-xl shadow-lg overflow-hidden" data-category="social-media">
+                    <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=400" alt="Social media marketing strategies" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Social Media Marketing: 2024 Strategies</h3>
+                        <p class="text-gray-600 mb-4">Master the latest social media marketing techniques to grow your brand and engage with your audience effectively.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">Social Media</span>
+                            <span class="text-gray-500 text-sm">8 min read</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="blog-card bg-white rounded-xl shadow-lg overflow-hidden" data-category="social-media">
+                    <img src="https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?w=400" alt="Instagram growth and engagement" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Instagram Growth: Organic Engagement Tips</h3>
+                        <p class="text-gray-600 mb-4">Learn proven strategies to grow your Instagram following organically and increase meaningful engagement.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">Social Media</span>
+                            <span class="text-gray-500 text-sm">6 min read</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="blog-card bg-white rounded-xl shadow-lg overflow-hidden" data-category="social-media">
+                    <img src="https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=400" alt="TikTok content creation" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">TikTok Content: Going Viral in 2024</h3>
+                        <p class="text-gray-600 mb-4">Discover the secrets behind viral TikTok content and learn how to create engaging short-form videos.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">Social Media</span>
+                            <span class="text-gray-500 text-sm">7 min read</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="blog-card bg-white rounded-xl shadow-lg overflow-hidden" data-category="social-media">
+                    <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=400" alt="LinkedIn professional networking" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">LinkedIn Networking: Professional Success</h3>
+                        <p class="text-gray-600 mb-4">Build a powerful professional network on LinkedIn and leverage it for career growth and business opportunities.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">Social Media</span>
+                            <span class="text-gray-500 text-sm">9 min read</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="blog-card bg-white rounded-xl shadow-lg overflow-hidden" data-category="social-media">
+                    <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?w=400" alt="YouTube channel growth" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">YouTube Success: Channel Growth Strategies</h3>
+                        <p class="text-gray-600 mb-4">Learn how to grow your YouTube channel with effective content strategies, SEO optimization, and audience engagement.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">Social Media</span>
+                            <span class="text-gray-500 text-sm">10 min read</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="blog-card bg-white rounded-xl shadow-lg overflow-hidden" data-category="social-media">
+                    <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=400" alt="Facebook advertising and marketing" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Facebook Ads: ROI Maximization Guide</h3>
+                        <p class="text-gray-600 mb-4">Master Facebook advertising to maximize your return on investment and reach your target audience effectively.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">Social Media</span>
+                            <span class="text-gray-500 text-sm">8 min read</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="blog-card bg-white rounded-xl shadow-lg overflow-hidden" data-category="social-media">
+                    <img src="https://images.unsplash.com/photo-1493612276216-ee3925520721?w=400" alt="Social media analytics" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Social Media Analytics: Data-Driven Growth</h3>
+                        <p class="text-gray-600 mb-4">Use analytics to understand your social media performance and make data-driven decisions for better results.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">Social Media</span>
+                            <span class="text-gray-500 text-sm">7 min read</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="section-padding bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+                    <i class="fas fa-info-circle text-blue-600 mr-3"></i>
+                    About AgeCalc Hub
+                </h2>
+                <p class="text-lg text-gray-600">
+                    Your comprehensive digital platform for age calculation, knowledge sharing, and AI assistance
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6">Our Mission</h3>
+                    <p class="text-gray-600 mb-6">
+                        AgeCalc Hub is designed to be your go-to digital companion for precise age calculations, 
+                        insightful blog content, and intelligent AI assistance. We believe in providing accurate, 
+                        reliable, and user-friendly tools that make your digital experience seamless and informative.
+                    </p>
+                    
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6">What We Offer</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <i class="fas fa-calculator text-blue-600 mr-3 mt-1"></i>
+                            <div>
+                                <h4 class="font-semibold text-gray-800">Precise Age Calculator</h4>
+                                <p class="text-gray-600">Calculate your exact age in years, months, days, hours, and minutes with accuracy.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-blog text-blue-600 mr-3 mt-1"></i>
+                            <div>
+                                <h4 class="font-semibold text-gray-800">Trending Blog Content</h4>
+                                <p class="text-gray-600">Stay updated with the latest insights in finance, health, and social media.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-robot text-blue-600 mr-3 mt-1"></i>
+                            <div>
+                                <h4 class="font-semibold text-gray-800">Smart AI Assistant</h4>
+                                <p class="text-gray-600">Get instant help with our intelligent chatbot supporting multiple languages.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-gradient-to-br from-blue-50 to-purple-50 rounded-2xl p-8">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6">Why Choose Us?</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-green-600 mr-3"></i>
+                            <span class="text-gray-700">100% Free to use</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-green-600 mr-3"></i>
+                            <span class="text-gray-700">Mobile responsive design</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-green-600 mr-3"></i>
+                            <span class="text-gray-700">SEO optimized content</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-green-600 mr-3"></i>
+                            <span class="text-gray-700">Regular content updates</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-green-600 mr-3"></i>
+                            <span class="text-gray-700">Multi-language AI support</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-green-600 mr-3"></i>
+                            <span class="text-gray-700">Fast and reliable performance</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section-padding bg-gray-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+                    <i class="fas fa-envelope text-blue-600 mr-3"></i>
+                    Contact Us
+                </h2>
+                <p class="text-lg text-gray-600">
+                    Get in touch with us for any questions, feedback, or support
+                </p>
+            </div>
+            
+            <div class="bg-white rounded-2xl shadow-xl p-8">
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-6">Get In Touch</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-center">
+                                <i class="fas fa-envelope text-blue-600 text-xl mr-4"></i>
+                                <div>
+                                    <h4 class="font-semibold text-gray-800">Email</h4>
+                                    <a href="mailto:subhanrajput3222@gmail.com" class="text-blue-600 hover:underline">
+                                        subhanrajput3222@gmail.com
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-phone text-blue-600 text-xl mr-4"></i>
+                                <div>
+                                    <h4 class="font-semibold text-gray-800">Phone</h4>
+                                    <a href="tel:03157845223" class="text-blue-600 hover:underline">
+                                        03157845223
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-clock text-blue-600 text-xl mr-4"></i>
+                                <div>
+                                    <h4 class="font-semibold text-gray-800">Response Time</h4>
+                                    <p class="text-gray-600">Within 24 hours</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-8">
+                            <h4 class="font-semibold text-gray-800 mb-4">Follow Us</h4>
+                            <div class="flex space-x-4">
+                                <a href="#" class="w-10 h-10 bg-blue-600 text-white rounded-full flex items-center justify-center hover:bg-blue-700 transition duration-300">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 bg-blue-400 text-white rounded-full flex items-center justify-center hover:bg-blue-500 transition duration-300">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 bg-pink-600 text-white rounded-full flex items-center justify-center hover:bg-pink-700 transition duration-300">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 bg-blue-800 text-white rounded-full flex items-center justify-center hover:bg-blue-900 transition duration-300">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-gradient-to-br from-blue-50 to-purple-50 rounded-xl p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-6">Quick Message</h3>
+                        <form class="space-y-4">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Name</label>
+                                <input type="text" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Email</label>
+                                <input type="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Message</label>
+                                <textarea rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"></textarea>
+                            </div>
+                            <button type="submit" class="w-full bg-blue-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-blue-700 transition duration-300">
+                                <i class="fas fa-paper-plane mr-2"></i>Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Smart AI Section -->
+    <section id="smart-ai" class="section-padding bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+                    <i class="fas fa-robot text-blue-600 mr-3"></i>
+                    Smart AI Assistant
+                </h2>
+                <p class="text-lg text-gray-600">
+                    Chat with our intelligent AI assistant for instant help and support
+                </p>
+            </div>
+            
+            <div class="bg-gradient-to-br from-blue-50 to-purple-50 rounded-2xl p-8 shadow-xl">
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Chat Interface -->
+                    <div class="md:col-span-2">
+                        <div class="bg-white rounded-xl shadow-lg h-96 flex flex-col">
+                            <div class="bg-blue-600 text-white p-4 rounded-t-xl">
+                                <h3 class="font-semibold flex items-center">
+                                    <i class="fas fa-robot mr-2"></i>
+                                    AI Assistant
+                                    <span class="ml-auto text-sm">Online</span>
+                                </h3>
+                            </div>
+                            
+                            <div id="chat-messages" class="flex-1 overflow-y-auto p-4 space-y-4 chat-container">
+                                <!-- Messages will be added here dynamically -->
+                            </div>
+                            
+                            <form id="chat-form" class="border-t p-4">
+                                <div class="flex space-x-2">
+                                    <input 
+                                        type="text" 
+                                        id="chat-input" 
+                                        placeholder="Type your message here..." 
+                                        class="flex-1 px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                                    >
+                                    <button 
+                                        type="submit" 
+                                        class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition duration-300"
+                                    >
+                                        <i class="fas fa-paper-plane"></i>
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    
+                    <!-- AI Features -->
+                    <div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-6">Features</h3>
+                        <div class="space-y-4">
+                            <div class="bg-white rounded-lg p-4 shadow-md">
+                                <h4 class="font-semibold text-gray-800 mb-2">
+                                    <i class="fas fa-language text-blue-600 mr-2"></i>
+                                    Multi-Language
+                                </h4>
+                                <select id="language-select" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500">
+                                    <option value="en">English</option>
+                                    <option value="es">Spanish</option>
+                                    <option value="fr">French</option>
+                                    <option value="de">German</option>
+                                    <option value="ur">Urdu</option>
+                                    <option value="ar">Arabic</option>
+                                </select>
+                            </div>
+                            
+                            <div class="bg-white rounded-lg p-4 shadow-md">
+                                <h4 class="font-semibold text-gray-800 mb-2">
+                                    <i class="fas fa-upload text-blue-600 mr-2"></i>
+                                    File Upload
+                                </h4>
+                                <input type="file" id="file-upload" class="w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-sm file:font-semibold file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100">
+                                <p id="file-name" class="text-xs text-gray-500 mt-2"></p>
+                            </div>
+                            
+                            <div class="bg-white rounded-lg p-4 shadow-md">
+                                <h4 class="font-semibold text-gray-800 mb-2">
+                                    <i class="fas fa-question-circle text-blue-600 mr-2"></i>
+                                    Try Asking
+                                </h4>
+                                <div class="text-sm text-gray-600 space-y-1">
+                                    <p>• "Who created you?"</p>
+                                    <p>• "Help me calculate my age"</p>
+                                    <p>• "What's the time now?"</p>
+                                    <p>• "Tell me about this website"</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">
+                        <i class="fas fa-calculator text-blue-400"></i>
+                        AgeCalc Hub
+                    </h3>
+                    <p class="text-gray-400">
+                        Your comprehensive digital platform for age calculation, knowledge sharing, and AI assistance.
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-400 hover:text-white transition duration-300">Home</a></li>
+                        <li><a href="#age-calculator" class="text-gray-400 hover:text-white transition duration-300">Age Calculator</a></li>
+                        <li><a href="#blogs" class="text-gray-400 hover:text-white transition duration-300">Blogs</a></li>
+                        <li><a href="#smart-ai" class="text-gray-400 hover:text-white transition duration-300">Smart AI</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Categories</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Finance</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Health</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Social Media</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Technology</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contact</h4>
+                    <ul class="space-y-2">
+                        <li class="text-gray-400">
+                            <i class="fas fa-envelope mr-2"></i>
+                            subhanrajput3222@gmail.com
+                        </li>
+                        <li class="text-gray-400">
+                            <i class="fas fa-phone mr-2"></i>
+                            03157845223
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center">
+                <p class="text-gray-400">
+                    © 2024 AgeCalc Hub. All rights reserved. Created by Subhan.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Age Calculator
+        const ageForm = document.getElementById('age-form');
+        const birthDateInput = document.getElementById('birth-date');
+        const ageResults = document.getElementById('age-results');
+        const agePlaceholder = document.getElementById('age-placeholder');
+
+        ageForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            const birthDate = new Date(birthDateInput.value);
+            const now = new Date();
+            
+            if (birthDate > now) {
+                alert('Birth date cannot be in the future!');
+                return;
+            }
+            
+            const ageData = calculateAge(birthDate, now);
+            
+            document.getElementById('years').textContent = ageData.years;
+            document.getElementById('months').textContent = ageData.months;
+            document.getElementById('days').textContent = ageData.days;
+            document.getElementById('hours').textContent = ageData.hours;
+            document.getElementById('minutes').textContent = ageData.minutes;
+            
+            agePlaceholder.classList.add('hidden');
+            ageResults.classList.remove('hidden');
+        });
+
+        function calculateAge(birthDate, currentDate) {
+            let years = currentDate.getFullYear() - birthDate.getFullYear();
+            let months = currentDate.getMonth() - birthDate.getMonth();
+            let days = currentDate.getDate() - birthDate.getDate();
+            
+            if (days < 0) {
+                months--;
+                const prevMonth = new Date(currentDate.getFullYear(), currentDate.getMonth(), 0);
+                days += prevMonth.getDate();
+            }
+            
+            if (months < 0) {
+                years--;
+                months += 12;
+            }
+            
+            const totalMs = currentDate.getTime() - birthDate.getTime();
+            const totalMinutes = Math.floor(totalMs / (1000 * 60));
+            const totalHours = Math.floor(totalMs / (1000 * 60 * 60));
+            const totalDays = Math.floor(totalMs / (1000 * 60 * 60 * 24));
+            
+            return {
+                years: years,
+                months: months,
+                days: days,
+                hours: totalHours,
+                minutes: totalMinutes
+            };
+        }
+
+        // Blog filtering
+        const blogFilters = document.querySelectorAll('.blog-filter');
+        const blogCards = document.querySelectorAll('.blog-card');
+
+        blogFilters.forEach(filter => {
+            filter.addEventListener('click', () => {
+                const category = filter.getAttribute('data-category');
+                
+                // Update active filter
+                blogFilters.forEach(f => {
+                    f.classList.remove('active', 'bg-blue-600', 'text-white');
+                    f.classList.add('bg-gray-200', 'text-gray-700');
+                });
+                filter.classList.remove('bg-gray-200', 'text-gray-700');
+                filter.classList.add('active', 'bg-blue-600', 'text-white');
+                
+                // Filter blogs
+                blogCards.forEach(card => {
+                    if (category === 'all' || card.getAttribute('data-category') === category) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Smart AI Chat
+        const chatForm = document.getElementById('chat-form');
+        const chatInput = document.getElementById('chat-input');
+        const chatMessages = document.getElementById('chat-messages');
+        const fileUpload = document.getElementById('file-upload');
+        const fileName = document.getElementById('file-name');
+        const languageSelect = document.getElementById('language-select');
+
+        let currentLanguage = 'en';
+        let uploadedFile = null;
+
+        // Language responses
+        const responses = {
+            en: {
+                greeting: "Hello! How can I help you today?",
+                creator: "I was created by Subhan.",
+                fileReceived: "File received and processed successfully!",
+                default: "I understand your question. Let me help you with that.",
+                thinking: "Let me think about that...",
+                error: "I apologize, but I encountered an error. Please try again."
+            },
+            es: {
+                greeting: "¡Hola! ¿Cómo puedo ayudarte hoy?",
+                creator: "Fui creado por Subhan.",
+                fileReceived: "¡Archivo recibido y procesado exitosamente!",
+                default: "Entiendo tu pregunta. Permíteme ayudarte con eso.",
+                thinking: "Déjame pensar en eso...",
+                error: "Me disculpo, pero encontré un error. Por favor, inténtalo de nuevo."
+            },
+            fr: {
+                greeting: "Bonjour! Comment puis-je vous aider aujourd'hui?",
+                creator: "J'ai été créé par Subhan.",
+                fileReceived: "Fichier reçu et traité avec succès!",
+                default: "Je comprends votre question. Laissez-moi vous aider avec cela.",
+                thinking: "Laissez-moi réfléchir à cela...",
+                error: "Je m'excuse, mais j'ai rencontré une erreur. Veuillez réessayer."
+            },
+            de: {
+                greeting: "Hallo! Wie kann ich Ihnen heute helfen?",
+                creator: "Ich wurde von Subhan erstellt.",
+                fileReceived: "Datei erfolgreich empfangen und verarbeitet!",
+                default: "Ich verstehe Ihre Frage. Lassen Sie mich Ihnen dabei helfen.",
+                thinking: "Lassen Sie mich darüber nachdenken...",
+                error: "Entschuldigung, aber ich bin auf einen Fehler gestoßen. Bitte versuchen Sie es erneut."
+            },
+            ur: {
+                greeting: "السلام علیکم! آج میں آپ کی کیسے مدد کر سکتا ہوں؟",
+                creator: "مجھے صبحان نے بنایا ہے۔",
+                fileReceived: "فائل کامیابی سے موصول اور پروسیس ہو گئی!",
+                default: "میں آپ کا سوال سمجھ گیا ہوں۔ میں اس میں آپ کی مدد کرتا ہوں۔",
+                thinking: "مجھے اس کے بارے میں سوچنے دیں...",
+                error: "معذرت، لیکن مجھے ایک خرابی کا سامنا ہوا۔ براہ کرم دوبارہ کوشش کریں۔"
+            },
+            ar: {
+                greeting: "مرحباً! كيف يمكنني مساعدتك اليوم؟",
+                creator: "تم إنشائي من قبل سبحان.",
+                fileReceived: "تم استلام الملف ومعالجته بنجاح!",
+                default: "أفهم سؤالك. دعني أساعدك في ذلك.",
+                thinking: "دعني أفكر في ذلك...",
+                error: "أعتذر، لكنني واجهت خطأ. يرجى المحاولة مرة أخرى."
+            }
+        };
+
+        languageSelect.addEventListener('change', (e) => {
+            currentLanguage = e.target.value;
+        });
+
+        fileUpload.addEventListener('change', (e) => {
+            const file = e.target.files[0];
+            if (file) {
+                uploadedFile = file;
+                fileName.textContent = file.name;
+            }
+        });
+
+        chatForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            const message = chatInput.value.trim();
+            if (!message && !uploadedFile) return;
+            
+            // Add user message
+            if (message) {
+                addMessage(message, 'user');
+            }
+            
+            // Handle file upload
+            if (uploadedFile) {
+                addMessage(`Uploaded: ${uploadedFile.name}`, 'user');
+                setTimeout(() => {
+                    addMessage(responses[currentLanguage].fileReceived, 'ai');
+                }, 500);
+                uploadedFile = null;
+                fileName.textContent = '';
+                fileUpload.value = '';
+            }
+            
+            // Generate AI response
+            if (message) {
+                setTimeout(() => {
+                    const response = generateAIResponse(message);
+                    addMessage(response, 'ai');
+                }, 800);
+            }
+            
+            chatInput.value = '';
+        });
+
+        function addMessage(message, sender) {
+            const messageDiv = document.createElement('div');
+            messageDiv.className = 'flex items-start space-x-3';
+            
+            if (sender === 'user') {
+                messageDiv.className += ' justify-end';
+                messageDiv.innerHTML = `
+                    <div class="chat-bubble-user max-w-xs lg:max-w-md px-4 py-2 rounded-lg">
+                        <p class="text-sm">${message}</p>
+                    </div>
+                    <div class="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center flex-shrink-0">
+                        <i class="fas fa-user text-white text-sm"></i>
+                    </div>
+                `;
+            } else {
+                messageDiv.innerHTML = `
+                    <div class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
+                        <i class="fas fa-robot text-blue-600 text-sm"></i>
+                    </div>
+                    <div class="chat-bubble-ai max-w-xs lg:max-w-md px-4 py-2 rounded-lg">
+                        <p class="text-sm">${message}</p>
+                    </div>
+                `;
+            }
+            
+            chatMessages.appendChild(messageDiv);
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+        }
+
+        function generateAIResponse(message) {
+            const lowerMessage = message.toLowerCase();
+            
+            // Check for creator question
+            if (lowerMessage.includes('who created') || lowerMessage.includes('who made') || 
+                lowerMessage.includes('creator') || lowerMessage.includes('developer') ||
+                lowerMessage.includes('banya') || lowerMessage.includes('banaya')) {
+                return responses[currentLanguage].creator;
+            }
+            
+            // Check for greeting
+            if (lowerMessage.includes('hello') || lowerMessage.includes('hi') || 
+                lowerMessage.includes('hey') || lowerMessage.includes('good') ||
+                lowerMessage.includes('salam') || lowerMessage.includes('namaste')) {
+                return responses[currentLanguage].greeting;
+            }
+            
+            // Age-related questions
+            if (lowerMessage.includes('age') || lowerMessage.includes('calculate') ||
+                lowerMessage.includes('umr') || lowerMessage.includes('birth')) {
+                return "I can help you with age calculations! Please use our Age Calculator section above to get precise age calculations in years, months, days, hours, and minutes.";
+            }
+            
+            // Blog-related questions
+            if (lowerMessage.includes('blog') || lowerMessage.includes('article') || 
+                lowerMessage.includes('finance') || lowerMessage.includes('health') || 
+                lowerMessage.includes('social media') || lowerMessage.includes('read')) {
+                return "Check out our trending blog section! We have great articles on finance, health, and social media topics that are updated regularly with valuable insights.";
+            }
+            
+            // General help
+            if (lowerMessage.includes('help') || lowerMessage.includes('support') ||
+                lowerMessage.includes('madad') || lowerMessage.includes('assistance')) {
+                return "I'm here to help! You can ask me about our age calculator, browse our blog content, or contact us for support. What would you like to know more about?";
+            }
+
+            // What can you do questions
+            if (lowerMessage.includes('what can you') || lowerMessage.includes('what do you') ||
+                lowerMessage.includes('features') || lowerMessage.includes('capabilities')) {
+                return "I can help you with several things: calculate your exact age, guide you through our blog content on finance, health & social media, answer questions about the website, and assist with file uploads. I also support multiple languages!";
+            }
+
+            // Time related
+            if (lowerMessage.includes('time') || lowerMessage.includes('date') ||
+                lowerMessage.includes('today') || lowerMessage.includes('now')) {
+                const now = new Date();
+                return `Current date and time: ${now.toLocaleDateString()} ${now.toLocaleTimeString()}. You can use our age calculator to find out your exact age!`;
+            }
+
+            // Contact questions
+            if (lowerMessage.includes('contact') || lowerMessage.includes('email') ||
+                lowerMessage.includes('phone') || lowerMessage.includes('reach')) {
+                return "You can contact us at subhanrajput3222@gmail.com or call 03157845223. Check our Contact section below for more details and social media links!";
+            }
+
+            // Programming/Tech questions
+            if (lowerMessage.includes('code') || lowerMessage.includes('programming') ||
+                lowerMessage.includes('website') || lowerMessage.includes('development')) {
+                return "This website is built with modern technologies including HTML5, CSS3, JavaScript, and Tailwind CSS. It's fully responsive and SEO-optimized for the best user experience!";
+            }
+
+            // Random responses for variety
+            const randomResponses = [
+                "That's an interesting question! Let me think about that...",
+                "I appreciate you asking! How else can I assist you today?",
+                "Great question! Is there anything specific about our website features you'd like to know?",
+                "I'm here to help with any questions about age calculation, our blog content, or general assistance!",
+                "Thanks for chatting with me! What would you like to explore on our website?"
+            ];
+
+            // If no specific match, return a random helpful response
+            return randomResponses[Math.floor(Math.random() * randomResponses.length)];
+        }
+
+        // Initialize with a welcome message
+        document.addEventListener('DOMContentLoaded', () => {
+            setTimeout(() => {
+                addMessage(responses[currentLanguage].greeting, 'ai');
+            }, 1000);
+        });
+
+        // Update active nav link on scroll
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('section[id]');
+            const navLinks = document.querySelectorAll('.nav-link');
+            
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 100;
+                if (window.pageYOffset >= sectionTop) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            navLinks.forEach(link => {
+                link.classList.remove('text-blue-600');
+                link.classList.add('text-gray-700');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.remove('text-gray-700');
+                    link.classList.add('text-blue-600');
+                }
+            });
+        });
+
+        // Add some animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fadeIn');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.blog-card, .section-padding > div').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
